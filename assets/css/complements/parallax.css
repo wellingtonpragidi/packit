@@ -1,0 +1,10 @@
+.parallax {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.95), -1px -1px 1px rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    z-index: 897
+}

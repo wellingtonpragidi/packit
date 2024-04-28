@@ -1,0 +1,55 @@
+.breadcrumb {
+    --bc__width: 100%;
+    --bc__background: #2A2D31;
+    --bcLink__color: #617EA7;
+    --bcLinkHover__color: #7775EE;
+    --bcCurrent__color: #90959A;
+    --bc__text-decoration: none; /* current e hover */
+    --bc__font-family: system-ui;
+    --bcSeparator: "\203A";
+    --bcSeparator__top: 4px;
+    --bcSeparator__font-size: 2.1rem;
+
+    position: relative;
+    width: var(--bc__width);
+}
+.breadcrumb ol {
+    display: inline-block;
+    margin: 0 0;
+    padding: 6px 10px;
+    list-style: none;
+    background: var(--bc__background);
+}
+.breadcrumb li {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+}
+.breadcrumb li::after {
+    position: relative;
+    content: var(--bcSeparator);
+    top: var(--bcSeparator__top);
+    font-size: var(--bcSeparator__font-size);
+    margin: 0 1px 0 5px;
+}
+.breadcrumb li:last-child::after {
+    display: none;
+}
+.breadcrumb li a {
+    color: var(--bcLink__color);
+    font-size: 1.1rem;
+    font-family: var(--bc__font-family);
+    text-decoration: none;
+}
+.breadcrumb li a:hover {
+    color: var(--bcLinkHover__color);
+    text-decoration: var(--bc__text-decoration);
+}
+.breadcrumb li a:focus {
+    color: var(--bcLink__color);
+    text-decoration: var(--bc__text-decoration);
+}
+.breadcrumb li.current a {
+    color: var(--bcCurrent__color);
+    text-decoration: var(--bc__text-decoration);
+}

@@ -1,0 +1,84 @@
+.accordion {
+    --acc__color: #555555;
+    --acc__background: #A8A1AA;
+    --acc__font-family: var(--fontPrime);
+    --acc__font-size: 1.325rem;
+    --acc__border: 1px solid #C1BCC2;
+    --acc__box-shadow: 2px 2px 1px #B4AFB6 inset, -2px -2px 1px #B4AFB6 inset;
+    --acc__text-shadow: 1px 1px rgba(255, 255, 255, 0.40);
+
+    --btnHover__color: #555555;
+    --btnHover__background: #CCC;
+    --btnHover__border: 1px solid #B3B3B3;
+    --btnHover__box-shadow: 
+        2px 2px 1px #B4AFB6 inset, 
+        -2px -2px 1px #B4AFB6 inset, 
+        0 3.5px 2px -2px rgba(0, 0, 0, 0.40);
+    --btnFocus__background: #D6D3D7;
+    --btnFocus__box-shadow: 
+        0 2px 1px #C1BDC2 inset, 
+        2px 0 1px #C1BDC2 inset, 
+        -2px 0 1px #C1BDC2 inset;
+
+    position: relative;
+    width: 100%;
+}
+
+.acc_btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 4px;
+    padding: 10px 35px 10px 15px;
+    letter-spacing: 0.094rem;
+    font-size: var(--acc__font-size);
+    font-family: var(--acc__font-family);
+    color: var(--acc__color);
+    background-color: var(--acc__background);
+    border: var(--acc__border);
+    box-shadow: var(--acc__box-shadow);
+    text-shadow: var(--acc__text-shadow);
+}
+.acc_btn::before, .acc_btn::after {
+    position: absolute;
+    display: block;
+    content: "";
+    box-shadow: var(--acc__text-shadow);
+    background-color: var(--acc__color);
+}
+.acc_btn::before {
+    right: 12px;
+    top: calc(50% - 2px);
+    width: 20px;
+    height: 4px;
+}
+.acc_btn::after {
+    right: 20px;
+    top: 12px;
+    top: calc(50% - 10px);
+    width: 4px;
+    height: 20px;
+    transition: 0.3s linear;
+}
+.acc_btn.expanded::after, .acc_btn.extended::after {
+    transform: rotate(90deg);
+    transition: 0.3s linear;
+}
+.acc_panel {
+    position: relative;
+    display: none;
+    width: 100%;
+    padding: 0 0 !important;
+    border: 1px solid #ddd;
+    border-top: none;
+    font-size: 1.063rem;
+    color: #4F5040;
+}
+.acc_panel.oppened {
+    display: block;
+}
+.acc_content {
+    position: relative;
+    padding: 10px;
+}

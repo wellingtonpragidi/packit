@@ -1,0 +1,14 @@
+.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.50) rgba(255, 255, 255, 0.20);
+    overflow-y: auto;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.scrollbar::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.30);
+}

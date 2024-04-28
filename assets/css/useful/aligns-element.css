@@ -1,0 +1,55 @@
+/* -------------------------------------------------
+    horizontal
+*/
+.flex_x { 
+    display: flex;
+    justify-content: center;
+}
+.align_x {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.centre_x {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* -------------------------------------------------
+    vertical
+*/
+.flex_y { 
+    display: flex;
+    align-items: center;
+}
+.align_y {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.centre_y {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* -------------------------------------------------
+    horizontal e vertical
+*/
+.flex_xy { 
+    display: flex;
+    align-items: center; /* alinha na vertical */
+    justify-content: center; /* alinha na horizontal */
+}
+.align_xy {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+.centre_xy {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

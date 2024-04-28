@@ -1,0 +1,19 @@
+.cur_alias { cursor: alias }
+.cur_allscroll { cursor: all-scroll }
+.cur_auto { cursor: auto }
+.cur_cell, .cur_plus { cursor: cell }
+.cur_copy { cursor: copy }
+.cur_crosshair { cursor: crosshair }
+.cur_default { cursor: default }
+.cur_grab { cursor: grab }
+.cur_grabbing { cursor: grabbing }
+.cur_help { cursor: help }
+.cur_move { cursor: move }
+.cur_not { cursor: not-allowed } .cur_nodrop { cursor: no-drop }
+.cur_none { cursor: none }
+.cur_pointer { cursor: pointer }
+.cur_progress { cursor: progress } .cur_wait { cursor: wait }
+.cur_text { cursor: text }
+.cur_zoom { cursor: zoom-in }
+.cur_zoomout { cursor: zoom-out }
+.cur_url { cursor: url(https://img.icons8.com/3d-fluency/94/cursor.png) 28 5, default }

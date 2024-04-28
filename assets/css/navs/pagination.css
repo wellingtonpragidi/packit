@@ -1,0 +1,80 @@
+.pagination {
+    --link__color: #555555;
+    --link__background: #A8A1AA;
+    --link__border: 1px solid #C1BCC2;
+    --link__box-shadow: 
+        2px 2px 1px #B4AFB6 inset, 
+        -2px -2px 1px #B4AFB6 inset, 
+        0 2px 2px -1px rgba(0, 0, 0, 0.50);
+    --link__text-shadow: 1px 1px rgba(255, 255, 255, 0.40);
+    --linkHover__color: #555555;
+    --linkHover__background: #CCC;
+    --linkHover__border: 1px solid #B3B3B3;
+    --linkHover__box-shadow: 
+        2px 2px 1px #B4AFB6 inset, 
+        -2px -2px 1px #B4AFB6 inset, 
+        0 3.5px 2px -2px rgba(0, 0, 0, 0.40);
+
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+.navpage {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.pagination ul, .pagination ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.pagination ul {
+}
+.pagination ol {
+	margin: 0 20px;
+}
+.pagination li {
+	display: inline-block;
+}
+.pagination li a {
+	position: relative;
+	display: block;
+	width: 45px;
+	height: 45px;
+	font-size: 1.4rem;
+	font-family: var(--fontPrime);
+	text-align: center;
+	line-height: 44px;
+	text-decoration: none;
+	border-radius: 3px;
+	color: var(--link__color);
+	background-color: var(--link__background);
+	border: var(--link__border);
+	box-shadow: var(--link__box-shadow);
+	text-shadow: var(--link__text-shadow);
+	user-select: none;
+}
+.pagination li.first a, .pagination li.prev a, 
+.pagination li.last a, .pagination li.next a {
+	font-size: 2.6rem;
+	line-height: 34px;
+}
+.pagination li a:hover, .pagination li.current a {
+	color: var(--linkHover__color);
+	background-color: var(--linkHover__background);
+	border: var(--linkHover__border);
+	box-shadow: var(--linkHover__box-shadow);
+	text-shadow: var(--linkHover__text-shadow);
+}
+.pagination li.disabled a {
+	color: var(--link__color);
+	background-color: var(--link__background);
+	border: var(--link__border);
+	box-shadow: var(--link__box-shadow);
+	text-shadow: var(--link__text-shadow);
+	cursor: no-drop;
+}
+.current_total_page {
+	margin: 0 auto 15px;
+}

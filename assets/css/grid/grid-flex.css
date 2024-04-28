@@ -1,0 +1,33 @@
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+[class^="cn_"], [class*=" cn_"] {
+    flex: 0 0 100%;
+}
+@media(min-width: 480px) {
+    /* 2 tamanhos de colunas */
+    [class^="cn_"], [class*=" cn_"] {
+        flex: 0 0 50%;
+    }
+    /* auto */
+    .cn_0 { 
+        flex: 1 0 0% 
+    }
+    .cn_100 {
+        flex: 0 0 100%;
+    }
+}
+@media(min-width: 768px) {
+    .cn_20 { flex: 0 0 20% }
+    .cn_25 { flex: 0 0 25% }
+    .cn_30 { flex: 0 0 30% }
+    .cn_33 { flex: 0 0 33.333333% }
+    .cn_40 { flex: 0 0 40% }
+    .cn_50 { flex: 0 0 50% }
+    .cn_60 { flex: 0 0 60% }
+    .cn_67 { flex: 0 0 66.666667% }
+    .cn_70 { flex: 0 0 70% }
+    .cn_75 { flex: 0 0 75% }
+    .cn_80 { flex: 0 0 80% }
+}

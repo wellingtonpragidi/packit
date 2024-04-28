@@ -1,0 +1,188 @@
+.navside {
+    --navside__backgroung: #212121;
+    --switch__color: linear-gradient(to bottom, #CCC, #888);
+    --menuMobile__width: 230px;
+    --itemLight__border: 1px solid rgba(255, 255, 255, 0.12);
+    --itemDark__border: 1px solid rgba(0, 0, 0, 1.0);
+    --navsideLink__color: #A5A5A5;
+    --navsideLinkHover__color: #DDD;
+    --navsideLinkHover__background: rgba(255, 255, 255, 0.05);
+    --navsideLink__font-family: var(--fontSystem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 230px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.40) rgba(255, 255, 255, 0.30);
+    background-color: var(--navside__backgroung);
+    z-index: 1023;
+}
+.navside::-webkit-scrollbar-track { background-color: rgba(255, 255, 255, 0.30) }
+.navside::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.40) }
+.navside::-webkit-scrollbar { width: 6px }
+
+.navside .logotipo {
+    height: 50px;
+}
+.navside .logotipo a {
+    text-align: right;
+    border-bottom: var(--itemLight__border);
+}
+.navside .logotipo img {
+    display: block;
+    max-height: 40px;
+    text-align: right;
+    margin: 0 0 0 auto;
+}
+.navside ul {
+    list-style: none;
+    margin: 0 0;
+    padding: 0 0;
+}
+.navside li {
+    position: relative;
+    line-height: initial;
+}
+.navside li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    color: var(--navsideLink__color);
+    font-size: 1rem;
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-top: var(--itemLight__border);
+    border-bottom: var(--itemDark__border);
+    text-decoration: none;
+}
+.navside .menu > li:nth-child(2) a {
+    border-top: var(--itemDark__border);
+}
+.navside li a:hover, 
+.navside .current a, .navside .active a, .navside .hasub.open > a {
+    color: var(--navsideLinkHover__color);
+    background: var(--navsideLinkHover__background);
+    text-decoration: none;
+}
+.navside li a:focus, .navside .logotipo a {
+    color: var(--navsideLink__color);
+    background: var(--navside__background);
+    text-decoration: none;
+}
+.navside .hasub > a {
+}
+.navside .hasub > a::before, .navside .hasub > a::after {
+    position: absolute;
+    content: "";
+    background: var(--navsideLink__color)
+}
+.navside .hasub > a::before {
+    right: 6px;
+    top: 15px;
+    width: 10px;
+    height: 2px;
+}
+.navside .hasub > a::after {
+    right: 10px;
+    top: 11px;
+    width: 2px;
+    height: 10px;
+    transition: transform .4s linear;
+}
+.navside .hasub.open > a::after {
+    transform: rotate(90deg);
+    transition: transform .4s linear;
+}
+.navside .isub li a {
+    font-size: 0.9rem;
+    padding-left: 15px;
+}
+.navside .isub .isub, .navside .isub ul, .navside ul ul ul {
+    display: none;
+}
+
+@media (width < 768px) {
+    .navside .toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: block;
+        width: 37px;
+        height: 31px;
+        overflow: hidden;
+        z-index: 1024;
+    }
+    .navside .toggle, .navside .toggle * {
+        cursor: pointer;
+    }
+    .navside .switch, .navside .switch::before, .navside .switch::after {
+        position: absolute;
+        display: block;
+        width: 37px;
+        z-index: 1024;
+    }
+    .navside .switch, .navside .switch::before, .navside .switch::after {
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--switch__color);
+        border-radius: 5px;
+    }
+    .navside .switch {
+        top: 0;
+        border: none;
+        padding: 0 0;
+    }
+    .navside .switch::before, .navside .switch::after {
+        content: "";
+        transition: transform 0.4s;
+    }
+    .navside .switch::before {
+        top: 12px;
+    }
+    .navside .switch::after {
+        top: 24px;
+    }
+    .navside .toggle.focus .switch {
+        width: 0;
+        height: 0;
+        overflow: visible;
+    }
+    .navside .toggle.focus .switch::before, .navside .toggle.focus .switch::after {
+        top: 12px;
+        width: 38px;
+        height: 5.5px;
+        overflow: visible;
+    }
+    .navside .toggle.focus .switch::after {
+        transform: rotate(45deg);
+    }
+    .navside .toggle.focus .switch::before {
+        transform: rotate(-45deg);
+    }
+    .navside .toggle, .navside .toggle.focus {
+        transform: scale(1.15, 1.1);
+    }
+    .navside {
+        width: 0;
+        overflow: hidden;
+        transition: width 0.9s;
+    }
+    .navside.visible {
+        width: var(--menuMobile__width);
+    }
+}
+@media (width >= 768px) {
+    .navside .toggle {
+        display: none;
+    }
+    .navside .logotipo img {
+        margin: 0 0 0 0;
+    }
+}

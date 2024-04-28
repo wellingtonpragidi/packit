@@ -1,0 +1,27 @@
+.h5 { min-height: 5vh }
+.h10 { min-height: 10vh }
+.h15 { min-height: 15vh }
+.h20 { min-height: 20vh }
+.h25 { min-height: 25vh }
+.h30 { min-height: 30vh }
+.h40 { min-height: 40vh }
+.h50 { min-height: 50vh }
+.h60 { min-height: 60vh }
+.h70 { min-height: 70vh }
+.h75 { min-height: 75vh }
+.h80 { min-height: 80vh }
+.h90 { min-height: 90vh }
+.h100 { min-height: 100vh }
+
+@media (min-width: 640px) {
+    .w15 { width: 15% }
+    .w20 { width: 20% }
+    .w25 { width: 25% }
+    .w30 { width: 30% }
+    .w33 { width: 33.333333% }
+    .w50 { width: 50% }
+    .w70 { width: 70% }
+    .w75 { width: 75% }
+    .w80 { width: 80% }
+    .w85 { width: 85% }
+}

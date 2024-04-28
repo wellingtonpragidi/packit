@@ -1,0 +1,48 @@
+/* .....................................................
+
+ * text-align
+ * ..................................................... */
+.txt_left { text-align: left !important }
+.txt_center { text-align: center !important }
+.txt_right { text-align: right !important }
+.txt_full { text-align: justify !important }
+
+/* .....................................................
+
+ * font-weight
+ * ..................................................... */
+.fw_light { font-weight: lighter !important }
+.fw_normal { font-weight: normal !important }
+.fw_bold { font-weight: bold !important }
+.fw300 { font-weight: 300 !important }
+.fw400 { font-weight: 400 !important }
+.fw500 { font-weight: 500 !important }
+.fw600 { font-weight: 600 !important }
+.fw700 { font-weight: 700 !important }
+.fw800 { font-weight: 800 !important }
+
+/* .....................................................
+
+ * text-overflow
+ * ..................................................... */
+.txt_overflow, .txt_nowrap, .txt_ellipsis {
+    display: block;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+/* .....................................................
+
+ * font-style
+ * ..................................................... */
+.fs_italic { font-style: italic }
+.fs_normal { font-style: normal }
+
+/* .....................................................
+
+ * text-transform
+ * ..................................................... */
+.upper {
+    text-transform: uppercase;
+}

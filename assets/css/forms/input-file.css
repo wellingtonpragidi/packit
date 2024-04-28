@@ -1,0 +1,55 @@
+.upload input[type=file] {
+    display: none !important;
+}
+/**-----------------------------------
+ * Altera todo o padrao por um botao e exibe caminho com nome do arquivo
+ *                                   									*/
+.filename {
+    font-size: 1.05rem;
+    color: var(--color);
+    font-family: var(--fontMono);
+}
+
+/**....................................
+ * 
+ * FileReader image:
+ *....................................*/
+.output {
+    margin-top: 15px;
+}
+
+/* multiple */
+.output [class^=cn_] div {
+    position: relative;
+    height: 75vw;
+    margin: 0.225rem;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+}
+@media(min-width: 768px) {
+    .output.flexbox.pack {
+        margin-right: -0.225rem;
+        margin-left: -0.225rem;
+    }
+    .output [class^=cn_] {
+        padding: 0 0;
+    }
+    .output [class^=cn_] div {
+        height: 15vw;
+    }
+}
+.output [class^=cn_] div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+
+/* single */
+.output .cn_100 {
+    padding: 0.225rem;
+}

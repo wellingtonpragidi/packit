@@ -1,0 +1,252 @@
+:root {
+    --fieldset__border: 1px solid #55585B;
+    --fieldset__border-width: 1px;
+    --fieldset__border-style: solid;
+    --fieldset__border-color: #55585B;
+    --fieldset__border-radius: 3px 3px 3px 3px;
+    --fieldset__border-collapse: collapse;
+    --fieldset__box-shadow: 1px 1px 1px #111, 1px 1px 1px #111 inset;
+    --legend__background: #33373C; /* para esconder a sombra do fieldset */
+
+    --label__color: var(--color);
+    --input__color: var(--color);
+
+    --input__background: #3F4347;
+    --input__border: 1px solid #5D6064;
+    --input__border-color: #5D6064;
+    --input__box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.11) inset;
+
+    --inputPlaceholder__color: var(--color);
+    --input__border-radius: 2px;
+    --inputSM__border-radius: 1px;
+    --inputLG__border-radius: 3px;
+
+    --inputFocus__background: #45494E;
+    --inputFocus__border: 1px solid #64676B;
+
+    --inputFocus__box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.15) inset;
+
+
+    --inputNumberControlHover__color: #BCBFC2;
+    --inputNumberControlHover__background: #54595F;
+}
+
+form {
+    position: relative;
+}
+input, button, textarea, select {
+    font: 1rem inherit;
+}
+
+/** fieldset e legend */
+fieldset {
+    border-width: var(--fieldset__border-width);
+    border-style: var(--fieldset__border-style);
+    border-color: var(--fieldset__border-color);
+    border-radius: var(--fieldset__border-radius);
+    border-collapse: var(--fieldset__border-collapse);
+    border-radius: var(--fieldset__border-radius);
+    box-shadow: var(--fieldset__box-shadow);
+}
+legend {
+    position: relative;
+    top: -2px;
+    padding: 0 8px;
+    background-color: var(--legend__background); /* para esconder a sombra do fieldset */
+}
+
+
+/** label */
+label, label {
+    display: inline-block;
+    margin: 1px 0 2px 2px;
+    font-size: 0.96rem;
+    color: var(--label__color);
+    cursor: alias;
+    margin-bottom: 2px;
+}
+
+
+/** input text's, date's, datalist, select, textarea */
+input[type=text], input[type=email], input[type=tel], input[type=url], input[type=password],
+input[type=date], input[type=time], input[type=datetime-local], input[type=week], input[type=month],
+select, input[list], /* datalist */
+textarea, 
+.formit [contenteditable], [contenteditable].formit, 
+input[type="number"], 
+input[type="file"], 
+input[type="search"] {
+    width: 100%;
+    height: 40px;
+    padding: 6px 9px 6px 12px;
+    font-size: 1.05rem;
+    font-family: var(--fontPrime);
+    letter-spacing: 0.05rem;
+    color: var(--input__color);
+    background-color: var(--input__background);
+    border: var(--input__border);
+    box-shadow: var(--input__box-shadow);
+    border-radius: var(--input__border-radius);
+}
+
+/** 
+ * redefine height de textarea para auto e usamos min-height
+ * o mesmo para [contenteditable] */
+textarea,
+.formit [contenteditable], [contenteditable].formit {
+    height: auto;
+    min-height: 18vh;
+    resize: vertical;
+} /*
+.formit.sm textarea, textarea.formit.sm, .formit textarea.sm, 
+.formit.lg textarea, textarea.formit.lg, .formit textarea.lg, 
+.formit.sm [contenteditable], [contenteditable].formit.sm, .formit [contenteditable].sm, 
+.formit.lg [contenteditable], [contenteditable].formit.lg, .formit [contenteditable].lg */
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=url]:focus, input[type=password]:focus,
+input[type=date]:focus, input[type=time]:focus, input[type=datetime-local]:focus, input[type=week]:focus, input[type=month]:focus,
+input[list]:focus,
+select:focus, 
+textarea:focus {
+    background-color: var(--inputFocus__background);
+    border: var(--inputFocus__border);
+    box-shadow: var(--inputFocus__box-shadow);
+}
+
+
+
+/** input number */
+input[type="number"] {
+    width: 110px;
+    text-align: center;
+    padding-right: 4px;
+}
+/* setas de incremento e decremento sempre visíveis */
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+/** input file */
+input[type="file"] {
+    padding: 9px;
+    height: 45px;
+    width: auto;
+    max-width: 100%;
+}
+
+/** input range */
+input[type=range], input[type=range], input[type=range] {
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 0 !important;
+} /* https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input/range */
+
+/** input color */
+input[type=color], input[type=color], input[type=color]{
+    width: 100px;
+    height: 80px;
+    display: block;
+    padding: 6px 6px;
+    background-color: var(--input__border-color);
+    border: var(--input__border);
+    border-radius: var(--input__border-radius);
+    box-shadow: none !important;
+}
+
+/** utilitarios para botoes */
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    width: auto;
+}
+/* cursor pointer para button's, file e color */
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"], 
+input[type="file"], 
+input[type="color"] {
+    cursor: pointer;
+}
+
+
+
+
+
+/** 
+ * 
+ * SIZE: 
+ * * * * */
+.formit.sm legend, legend.formit.sm, .formit legend.sm {
+    font-size: 0.875rem;
+}
+.formit.lg legend, legend.formit.lg, .formit legend.lg {
+    font-size: 1.3rem;
+}
+
+.formit.sm label, label.formit.sm, .formit label.sm {
+    font-size: 0.90rem;
+}
+.formit.lg label, label.formit.lg, .formit label.lg {
+    font-size: 1.06rem;
+    margin-bottom: 3px;
+}
+
+.formit.sm input[type=text], input[type=text].formit.sm, .formit input[type=text].sm, 
+.formit.sm input[type=email], input[type=email].formit.sm, .formit input[type=email].sm, 
+.formit.sm input[type=tel], input[type=tel].formit.sm, .formit input[type=tel].sm, 
+.formit.sm input[type=url], input[type=url].formit.sm, .formit input[type=url].sm, 
+.formit.sm input[type=password], 
+.formit.sm input[type=search], 
+
+.formit.sm input[type=date], input[type=date].formit.sm, .formit input[type=date].sm, 
+.formit.sm input[type=time], input[type=time].formit.sm, .formit input[type=time].sm, 
+.formit.sm input[type=datetime-local], input[type=datetime-local].formit.sm, .formit input[type=datetime-local].sm, 
+.formit.sm input[type=week], input[type=week].formit.sm, .formit input[type=week].sm, 
+.formit.sm input[type=month], input[type=month].formit.sm, .formit input[type=month].sm, 
+
+.formit.sm select, select.formit.sm, .formit select.sm, 
+.formit.sm input[list], input[list].formit.sm .formit input[list].sm,
+.formit.sm textarea, textarea.formit.sm, .formit textarea.sm, 
+.formit.sm [contenteditable], [contenteditable].formit.sm, .formit [contenteditable].sm,
+
+.formit.sm input[type=number], input[type=number].formit.sm, .formit input[type=number].sm {
+    height: 31px;
+    padding: 4px 8px;
+    font-size: 0.875rem;
+    letter-spacing: inherit;
+}
+
+.formit.lg input[type=text], input[type=text].formit.lg, .formit input[type=text].lg, 
+.formit.lg input[type=email], input[type=email].formit.lg, .formit input[type=email].lg, 
+.formit.lg input[type=tel], input[type=tel].formit.lg, .formit input[type=tel].lg, 
+.formit.lg input[type=url], input[type=url].formit.lg, .formit input[type=url].lg, 
+.formit.lg input[type=password], 
+.formit.lg input[type=search], 
+
+.formit.lg input[type=date], input[type=date].formit.lg, .formit input[type=date].lg, 
+.formit.lg input[type=time], input[type=time].formit.lg, .formit input[type=time].lg, 
+.formit.lg input[type=datetime-local], input[type=datetime-local].formit.lg, .formit input[type=datetime-local].lg, 
+.formit.lg input[type=week], input[type=week].formit.lg, .formit input[type=week].lg, 
+.formit.lg input[type=month], input[type=month].formit.lg, .formit input[type=month].lg, 
+
+.formit.lg select, select.formit.lg, .formit select.lg,
+.formit.lg input[list], input[list].formit.lg .formit input[list].lg,
+.formit.lg textarea, textarea.formit.lg, .formit textarea.lg, 
+.formit.lg [contenteditable], [contenteditable].formit.lg, .formit [contenteditable].lg, 
+.formit.lg input[type=number], input[type=number].formit.lg, .formit input[type=number].lg {
+    height: 48px;
+    padding: 8px 12px 8px 15px;
+    font-size: 1.3rem;
+    border-radius: 3px
+}
+
+.formit.sm input[type=number], input[type=number].formit.sm, .formit input[type=number].sm {
+    width: 90px;
+    padding-right: 3px;
+}
+.formit.lg input[type=number], input[type=number].formit.lg, .formit input[type=number].lg {
+    width: 120px;
+    padding-right: 5px;
+}

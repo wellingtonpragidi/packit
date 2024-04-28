@@ -1,0 +1,36 @@
+.floatbox_figure {
+    position: relative;
+    display: block;
+}
+.floatbox_figure::before, .floatbox_figure::after {
+    display: table !important;
+    content: '' !important;
+    clear: both !important;
+}
+figure[class^="col_"], figure[class*=" col_"] {
+    margin: 0.313rem;
+    padding: 0.45rem 0.45rem;
+    width: calc(100% - 0.626rem);
+    float: left;
+}
+@media(min-width: 480px) {
+    figure[class^="col_"], figure[class*=" col_"] { 
+        width: calc(50% - 0.626rem) 
+    }
+    figure.col_100 {
+        width: calc(100% - 0.626rem)
+    }
+}
+@media(min-width: 640px) {
+    figure.col_20 { width: calc(20% - 0.626rem) }
+    figure.col_25 { width: calc(25% - 0.626rem) }
+    figure.col_30 { width: calc(30% - 0.626rem) }
+    figure.col_33 { width: calc(33.333333% - 0.626rem) }
+    figure.col_40 { width: calc(40% - 0.626rem) }
+    figure.col_50 { width: calc(50% - 0.626rem) }
+    figure.col_60 { width: calc(60% - 0.626rem) }
+    figure.col_67 { width: calc(66.666667% - 0.626rem) }
+    figure.col_70 { width: calc(70% - 0.626rem) }
+    figure.col_75 { width: calc(75% - 0.626rem) }
+    figure.col_80 { width: calc(80% - 0.626rem) }
+}

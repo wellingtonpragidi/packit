@@ -1,0 +1,7 @@
+[icon], [icon] .ico {
+    position: relative;
+    /*top: 6px;*/
+    display: inline-block;
+    text-align: center;
+    line-height: 0;
+}

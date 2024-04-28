@@ -1,0 +1,49 @@
+.formit.sm textarea, textarea.formit.sm, .formit textarea.sm, 
+.formit.sm [contenteditable], [contenteditable].formit.sm, .formit [contenteditable].sm {
+    min-height: 12vh;
+}
+/* padrao - min-height: 18vh */
+.formit.lg textarea, textarea.formit.lg, .formit textarea.lg, 
+.formit.lg [contenteditable], [contenteditable].formit.lg, .formit [contenteditable].lg {
+    min-height: 22vh;
+}
+
+textarea.focusgrow {
+    transition: 1s;
+}
+textarea.sm.focusgrow:focus, .sm textarea.focusgrow:focus {
+    min-height: calc((12vh * 100) / 60);
+}
+textarea.focusgrow:focus {
+    min-height: calc((18vh * 100) / 60);
+}
+textarea.lg.focusgrow:focus, .sm textarea.focusgrow:focus {
+    min-height: calc((22vh * 100) / 60);
+}
+
+.grow {
+    display: grid;
+}
+.grow [contenteditable], .textfield.grow [contenteditable] {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.textfield [contenteditable] p:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+[contenteditable=true]:empty::before {
+    display: block;
+    content: attr(placeholder);
+    pointer-events: none;
+    opacity: .6;
+}
+.formit.autorise, .formit.grow, .formit.textfield, .grow [contenteditable], .textfield.grow [contenteditable] {
+    position: relative;
+    resize: none;
+    overflow: hidden;
+}
+
+.formit [contenteditable]:focus-within, .formit [contenteditable]:active {
+    border: var(--inputFocus__border);
+    box-shadow: var(--inputFocus__box-shadow);
+}

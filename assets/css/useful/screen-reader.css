@@ -1,0 +1,28 @@
+.screen_reader {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    font-size: 14px;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important
+    word-wrap: normal !important;
+}
+a.screen_reader:focus {
+    position: relative !important;
+    display: block;
+    color: #303030;
+    background-color: #FBF37E;
+    clip: auto;
+    clip-path: none;
+    width: auto !important;
+    height: auto !important;
+    margin: 1px !important;
+    padding: 3px 6px !important;
+    line-height: normal;
+    text-decoration: none;
+    z-index: 876543; /* acima de qualquer elemento do frontwork */
+}

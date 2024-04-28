@@ -1,0 +1,111 @@
+/** padroes em reset.css */
+/* ....................................................
+
+ * Listas ordenadas <ol>
+ * ..................................................... */
+ol.ini0, ol.lowercase, ol.uppercase {
+    padding-left: 34px;
+}
+ol.ini0 {
+    list-style: decimal-leading-zero;
+}
+ol.lowercase {
+    list-style: lower-latin;
+}
+ol.uppercase {
+    list-style: upper-latin;
+}
+ol.lowercase li::marker, ol.uppercase li::marker {
+    font-family: var(--fontMono);
+}
+ol.roman {
+    margin-left: 25px;
+}
+ol.roman li {
+    position: relative;
+    list-style: none;
+    counter-increment: listroman 1;
+}
+ol.roman li::before {
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    line-height: 2;
+    content: counter(listroman, upper-roman) '.'; /* counter(listroman, upper-roman) ".\00A0 " */
+    font-family: var(--fontSerif);
+}
+
+
+/* ....................................................
+
+ * Listas nao ordenadas <ul>
+ * ..................................................... */
+ul.inside {
+    list-style: inside;
+}
+ul.circle {
+    list-style: circle;
+}
+ul.square {
+    list-style: square;
+}
+ul.checked {
+    list-style: '\02713'; /* ✓ */
+}
+ul.checked li::marker {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+ul.hyphen {
+    list-style: '\2013'; /* – &minus; */
+}
+ul.hyphen li::marker {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+ul.plus {
+    list-style: '\002B'; /* + &plus; */
+}
+ul.plus li::marker {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+ul.arrow {
+    list-style: '\027A4'; /* ➤ */
+}
+ul.arrow li {
+    padding-left: 4px;
+}
+ul.arrow li::marker {
+    font-size: 12.5px;
+}
+
+ul.star {
+    list-style: '\2605'; /* ★ */
+}
+ul.star li::marker {
+    font-size: 20px;
+}
+ul.heart {
+    list-style: '\2665'; /* ♥  &hearts;*/
+}
+ul.heart li::marker {
+    font-size: 18px;
+}
+ul.checked li, ul.hyphen li, ul.plus li, ul.star li, ul.heart li {
+    padding-left: 6px;
+}
+
+
+.unlist {
+    padding: 0 0;
+    margin: 0 0;
+    list-style: none;
+}
+ol.inline li, ul.inline li {
+    display: inline-block;
+    padding: 5px 10px;
+}

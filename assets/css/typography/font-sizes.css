@@ -1,0 +1,37 @@
+.fs10 { font-size: 0.625rem !important }
+.fs11 { font-size: 0.688rem !important }
+.fs12 { font-size: 0.75rem !important }
+.fs13 { font-size: 0.813rem !important }
+.fs14 { font-size: 0.875rem !important }
+.fs15 { font-size: 0.938rem !important }
+.fs16 { font-size: 1rem !important }
+.fs17 { font-size: 1.063rem !important }
+.fs18 { font-size: 1.125rem !important }
+.fs19 { font-size: 1.188rem !important }
+.fs20 { font-size: 1.25rem !important }
+.fs21 { font-size: 1.313rem !important }
+.fs23 { font-size: 1.438rem !important }
+.fs25 { font-size: 1.563rem !important }
+.fs27 { font-size: 1.688rem !important }
+.fs30 { font-size: 1.875rem !important }
+.fs33 { font-size: 2.063rem !important }
+.fs36 { font-size: 2.25rem !important }
+.fs40 { font-size: 2.5rem !important }
+
+.fit03 { font-size: calc(0.8rem + 1vmin) !important }
+@media (min-width: 550px) {
+    .fit03 { font-size: calc(0.8rem + 1vmax) !important; }
+}
+.fit02 { font-size: calc(0.75rem + 1.25vw) !important }
+.fit01 { font-size: calc(0.6rem + 1.5vw) !important }
+.fit0 { font-size: calc(0.37rem + 2.75vw) !important }
+.fit1 { font-size: calc(0.325rem + 3.2vw) !important }
+.fit2 { font-size: calc(0.29rem + 3.8vw) !important }
+.fit3 { font-size: calc(0.25rem + 4.4vw) !important }
+.fit4 { font-size: calc(0.213rem + 5vw) !important }
+.fit5 { font-size: calc(0.175rem + 5.7vw) !important }
+.fit6 { font-size: calc(0.14rem + 6.3vw) !important }
+.fit7 { font-size: calc(0.1rem + 7.15vw) !important }
+.fit8 { font-size: calc(0.075rem + 7.9vw) !important }
+.fit9 { font-size: calc(0.05rem + 8.5vw) !important }
+.fit10 { font-size: calc(0.01rem + 9vw) !important }

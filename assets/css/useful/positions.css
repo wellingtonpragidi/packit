@@ -1,0 +1,60 @@
+.rel { position: relative;
+}
+.abs { position: absolute; 
+}
+.fix { position: fixed;
+}
+/** top, right, bottom, left  */
+.t0 { top: 0 !important }
+.t1 { top: 1px }
+.t2 { top: 2px }
+.t3 { top: 3px }
+.t4 { top: 4px }
+.t5 { top: 5px }
+
+.r0 { right: 0 !important }
+.r1 { right: 1px }
+.r2 { right: 2px }
+.r3 { right: 3px }
+.r4 { right: 4px }
+.r5 { right: 5px }
+
+.b0 { bottom: 0 !important }
+.b1 { bottom: 1px }
+.b2 { bottom: 2px }
+.b3 { bottom: 3px }
+.b4 { bottom: 4px }
+.b5 { bottom: 5px }
+
+.l0 { left: 0 !important }
+.l1 { left: 1px }
+.l2 { left: 2px }
+.l3 { left: 3px }
+.l4 { left: 4px }
+.l5 { left: 5px }
+
+.inset0 { inset: 0  !important }
+
+.t-1 { top: -1px }
+.t-2 { top: -2px }
+.t-3 { top: -3px }
+.t-4 { top: -4px }
+.t-5 { top: -5px }
+
+.r-1 { right: -1px }
+.r-2 { right: -2px }
+.r-3 { right: -3px }
+.r-4 { right: -4px }
+.r-5 { right: -5px }
+
+.b-1 { bottom: -1px }
+.b-2 { bottom: -2px }
+.b-3 { bottom: -3px }
+.b-4 { bottom: -4px }
+.b-5 { bottom: -5px }
+
+.l-1 { left: -1px }
+.l-2 { left: -2px }
+.l-3 { left: -3px }
+.l-4 { left: -4px }
+.l-5 { left: -5px }

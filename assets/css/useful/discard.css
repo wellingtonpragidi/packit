@@ -1,0 +1,18 @@
+.discard {
+    position: relative;
+}
+.discard .close {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    color: #000;
+    filter: drop-shadow(0 1px rgba(255, 255, 255, 0.18));
+    z-index: 97;
+}
+.discard .close [icon=x] {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

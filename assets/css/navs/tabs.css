@@ -1,0 +1,93 @@
+.tab {
+    --tab__background: #B2B6BA;
+    --navtab__background: #90959A;
+    --item__color: #212729;
+    --item__border-width: 2px;
+    --item__background: #90959A;
+    --item__padding: 10px 14px;
+    --item__font-size: 1.15rem;
+    --itemHover__color: #212729;
+    --content__color: #3E4349;
+    --content__padding: 6px 12px;
+
+    position: relative;
+    background-color: var(--tab__background);
+}
+.navtab {
+    display: grid;
+    background: #90959A;
+}
+.navtab ul {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0 0 auto; /* end */
+    margin: 0 0;
+    padding: 0 0
+}
+.navtab.center ul {
+    margin: auto;
+}
+.navtab.end ul {
+    margin: 0 0 0 auto;
+}
+.navtab li {
+    color: var(--item__color);
+    border-width: 0;
+    border-right-width: var(--item__border-width);
+    border-style: solid;
+    border-color: var(--tab__background);
+	background: var(--item__background);
+    padding: var(--item__padding);
+    font-size: var(--item__font-size);
+	transition: 0.3s;
+	cursor: pointer;
+}
+.navtab.full li {
+    text-align: center;
+    flex: 1 0 0;
+}
+.navtab.center li:first-child, .navtab.end li:first-child {
+    border-left-width: var(--item__border-width);
+}
+.navtab.end li:last-child, .navtab.full li:last-child {
+    border-right: none;
+}
+.navtab li:hover, .navtab li.active {
+    color: var(--itemHover__color);
+    background: var(--tab__background);
+}
+.tab .content {
+    display: none;
+    color: var(--content__color);
+    padding: var(--content__padding);
+	animation: tab_effect 1s;
+}
+.tab .content.current {
+    display: block;
+}
+
+.tab.block {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.tab.block .navtab, .tab.block .navtab ul {
+    display: block;
+}
+.tab.block .navtab li {
+    border-width: 0;
+    border-bottom-width: var(--item__border-width);
+}
+.tab.block .navtab li:last-child {
+    border-bottom: none;
+}
+.tab.block .navtab li:hover, .tab.block .navtab li.active {
+    color: var(--itemHover__color);
+    background: var(--tab__background);
+}
+
+@keyframes tab_effect {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

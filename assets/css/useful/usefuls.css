@@ -1,0 +1,27 @@
+.float_right { float: right }
+.float_left { float: left }
+
+.clean::before, .clean::after, .clearfix::before, .clearfix::after {
+    display: table !important;
+    content: '' !important;
+    clear: both !important;
+}
+
+.dblock { 
+    display: block;
+}
+.dinline { 
+    display: inline-block;
+}
+.dflex { 
+    display: flex;
+}
+.dgrid { 
+    display: grid;
+}
+.dtable { 
+    display: table;
+}
+.dnone { 
+    display: none;
+}

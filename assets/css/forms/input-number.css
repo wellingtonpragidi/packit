@@ -1,0 +1,101 @@
+/**      geral      */
+.numeric {
+    position: relative;
+    height: 45px;
+    border: var(--input__border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.numeric input[type=number] {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--input__color);
+    background-color: var(--input__background);
+    margin: auto;
+    text-align: center;
+    font-family: var(--fontPrime);
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: var(--input__box-shadow);
+}
+.numeric .plus, .numeric .less {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.570rem;
+    line-height: 0.6;
+    color: var(--input__color);
+    cursor: pointer;
+    user-select: none;
+    z-index: 11;
+}
+.numeric .plus:hover, .numeric .less:hover {
+    color: var(--inputNumberControlHover__color) !important;
+    background-color: var(--inputNumberControlHover__background) !important;
+}
+
+/**   side   */
+.numeric.side {
+    width: 100px;
+}
+.numeric.side input[type=number] {
+    padding: 0 0;
+}
+.numeric.side .control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 100%;
+    background-color: var(--input__background);
+    border-left: var(--input__border);
+    z-index: 10;
+}
+.numeric.side .plus, .numeric.side .less {
+    right: 0;
+    height: 21.5px;
+}
+.numeric.side .plus {
+    top: 0;
+    border-bottom: var(--input__border);
+}
+.numeric.side .less {
+    bottom: 0;
+}
+
+/**   both   */
+.numeric.both {
+    position: relative;
+    width: 120px;
+}
+.numeric.both input[type=number] {
+    padding: 0 0 0 19px;
+}
+.numeric.both .control {
+    position: static;
+    display: inline;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.numeric.both .plus, .numeric.both .less {
+    top: 0;
+    line-height: 1.4;
+    width: 24px;
+    height: 100%;
+    background-color: var(--input__background);
+}
+.numeric.both .plus {
+    right: 0;
+    border-left: var(--input__border);
+}
+.numeric.both .less {
+    left: 0;
+    border-right: var(--input__border);
+}

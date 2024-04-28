@@ -1,0 +1,481 @@
+:root {
+    --red: #8F3B3F;
+    --green: #00BE88;
+    --blue: #115591;
+    --blueDark: #006B89;
+    --blueGray: #4B5261;
+    --yellow: rgb(182, 174, 31, 0.80); /* #B6AE1F */
+    --orange: rgba(222, 126, 41, 0.85); /* #DE7E29 */
+    --pink: rgba(182, 110, 134, 0.90);
+    --purple: #8359DF;
+    --brown: #4F5040;
+    --white: #E5E5E5;
+    --white2: #CDD0D2;
+    --white3: #B2B6BA;
+    --gray: #858585;
+    --dark: #212729;
+    --info: #668D92;
+
+    --fontSystem: system-ui, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --fontPrime: var(--fontSystem);
+    --fontSub: var(--fontSystem);
+    --fontSans: var(--fontSystem);
+    --fontSerif: serif;
+    --fontMono: 'Consola', monospace;
+
+    --color: #90959A;
+    --background: #33373C;
+    --border: 1px solid #55585B;
+    --border-color: #55585B;
+
+    --link__color: #007580;
+    --linkHover__color: #0099A6;
+    --link__text-decoration: none;
+    --linkHover__text-decoration: underline;
+
+    --figure__background: #26292D;
+    --figure__border: var(--border);
+
+    --pre__color: inherit;
+    --pre__background: #3c4044;
+    --pre__border: 1px solid #484D51;
+
+    --code__color: var(--pink);
+    --code__background: transparent;
+
+    --mark__color: var(--white);
+    --mark__background: var(--yellow);
+
+    --hr__height: 2px;
+    --hr__border-top: 1px solid #111;
+    --hr__border-bottom: 1px solid #aaa;
+    --hr__background: transparent;
+
+    --selection__color: #FFFFFF;
+    --selection__background: #2200FF;
+}
+kbd {
+    --kbd__margin: 0 0.035rem;
+    --kbd__padding: 0.155rem 0.4rem 0.09rem;
+    --kbd__font-size: 0.845rem;
+    --kbd__letter-spacing: 0.65px;
+    --kbd__color: #DDD;
+    --kbd__background-color: #666;
+    --kbd__border: 2px #666 outset;
+    --kbd__border-radius: 4px;
+    --kbd__box-shadow: 
+        0 3px 2px -1px rgba(0, 0, 0, 0.65), 
+        -1px 0 1px rgba(0, 0, 0, 0.65), 
+        1px 0 1px rgba(0, 0, 0, 0.65), 
+        1px 1px 1px 0 rgba(255, 255, 255, 0.23) inset;
+    --kbd__cursor: default;
+    --kbd__user-select: inherit;
+
+    --kbdBackground__selection: rgba(255, 255, 255, 0.40);
+    --kbdColor__selection: inherit;
+}
+
+*, *::before, *::after {
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0 0;
+    font-size: 1.063rem;
+    font-family: var(--fontSans);
+    color: var(--color);
+    background-color: var(--background);
+    line-height: 1.15;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    font-family: var(--fontPrime);
+    font-weight: 600;
+    letter-spacing: 0.010rem;
+    overflow-wrap: break-word;
+}
+h1 {
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+}
+h2 {
+    font-size: 1.75rem;
+    margin: 0.95rem 0 0.8rem; /* 20 */
+}
+h3 {
+    font-size: 1.5rem; /* 24px */
+    margin: 0.9rem 0 0.65rem; /* 18 */
+}
+h4 {
+    font-size: 1.35rem; /* 21.5px */
+    margin: 0.9rem 0 0.6rem; /* 21 */
+}
+h5 {
+    font-size: 1.19rem; /* 19px */
+    margin: 0.9rem 0 0.6rem; /* 22px */
+    font-weight: 600;
+}
+h6 {
+    font-size: 1.06rem; /* 17px */
+    margin: 0.75rem 0 0.5rem; /* 25px */
+    font-weight: 600;
+}
+
+p {
+    position: relative;
+    display: block;
+    margin-top: 0.690rem;
+    margin-bottom: 0.690rem;
+    overflow-wrap: break-word;
+}
+/**
+ * aqui é removido a margin-top da tag "p" 
+ * quando as tas "h2-h6" precede uma tag "p"
+ * `o mesmo que` quando "p" sucede uma tag "h2-h6"
+*/
+h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: 0;
+}
+#content {
+    position: relative;
+}
+/** aqui 'se ouver' espacamento superior no primeiro filho de article, nos o removemos */
+article:not(.ws-article) > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+/** aqui 'se ouver' espacamento inferior no ultimo filho de article, nos o removemos */
+article:not(.ws-article) > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+a {
+    color: var(--link__color);
+    text-decoration: var(--link__text-decoration);
+    transition: 0.25s;
+    cursor: pointer;
+}
+a:hover, a:focus, a:active {
+    color: var(--linkHover__color);
+    text-decoration: var(--linkHover__text-decoration);
+    transition: 0.25s;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    margin: 0.625rem 0;
+    font-size: 1rem;
+}
+ul li, ol li {
+    line-height: 1.5;
+}
+dl {
+    padding-left: 5px;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+dt {
+    font-size: 85%;
+    margin: 11px 0 5px;
+}
+dd {
+    position: relative;
+    margin-left: 25px;
+}
+dd::before {
+    position: absolute;
+    top: -6px;
+    left: -14px;
+    content: '\02022';
+    font-size: 1.43rem;
+}
+
+pre {
+    white-space: pre-wrap;
+    margin: 0.75rem 0;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.3;
+    letter-spacing: 1.1px;
+    border-radius: 3px;
+    font-family: var(--fontMono);
+    font-weight: lighter;
+    color: var(--pre__color);
+    background-color: var(--pre__background);
+    border: var(--pre__border);
+}
+
+audio, img, picture, svg, textarea, video {
+    display: block;
+    max-width: 100%;
+}
+audio, video {
+    width: 100%;
+}
+audio {
+    border-radius: 15px;
+}
+img {
+    height: auto; 
+    font-size: 14px;
+}
+
+figure {
+    margin: 0.313rem;
+    padding: 0.45rem 0.45rem;
+    background-color: var(--figure__background);
+    border: var(--figure__border);
+}
+figcaption {
+    position: relative;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+figcaption.cite {
+    font-style: italic;
+    font-family: var(--fontPrime);
+}
+figcaption.cite::before {
+    position: relative;
+    content: "– ";
+}
+
+.embed {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.embed::before {
+    padding-top: 56.25%;
+    display: block;
+    content: "";
+}
+.embed iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+iframe {
+    width: 100%;
+    border: 0;
+}
+
+hr {
+    margin: 1.5rem 0;
+    height: 1px;
+    border: none;
+    background-color: transparent;
+    background-image: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.30),
+              rgba(0, 0, 0, 0.50),
+            rgba(0, 0, 0, 0.30),
+          rgba(0, 0, 0, 0.22),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+hr ~ hr {
+    margin: -1.5rem 0 1.5rem;
+    background-image: linear-gradient(to right, 
+        rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.27),
+              rgba(255, 255, 255, 0.31),
+            rgba(255, 255, 255, 0.27),
+          rgba(255, 255, 255, 0.22),
+        rgba(255, 255, 255, 0.03)
+    );
+}
+
+details {
+    margin: 0.25rem auto;
+    padding: 0.5rem 0.5rem 0;
+    border: 1px solid var(--color);
+    border-radius: 4px;
+}
+summary {
+    margin: -0.5rem -0.5rem 0;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+details[open] {
+    padding: 0.5rem;
+}
+details[open] summary {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color);
+}
+
+blockquote {
+    position: relative;
+    margin: 0.5rem 0 4.125rem 0;
+    padding: 0.9rem;
+    color: #B93E44;
+    border: 2px solid var(--red);
+    border-radius: 1.375rem;
+    font-size: 1.15rem;
+    font-family: var(--fontSerif);
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 0.08rem;
+    text-indent: 1rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.50);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.40), 1px 1px 1px rgba(0, 0, 0, 0.40) inset;
+}
+blockquote::after {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 2.5rem;
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--red);
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 100% 1px 0;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.60));
+    overflow: hidden;
+    z-index: 3;
+}
+blockquote::before {
+    position: absolute;
+    bottom: -4px;
+    left: 2.5rem;
+    content: "";
+    width: 4.375rem;
+    border: 4px solid var(--background);
+    z-index: 2;
+}
+blockquote cite {
+    position: absolute;
+    left: 4.813rem;
+    bottom: -32px;
+    display: block;
+    width: calc(100% - 4.813rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(255, 255, 255, 0.40);
+    text-shadow: 1px 1px var(--background), 0 0 #000, 1px 1px var(--background);
+    z-index: 1;
+}
+@media(min-width: 480px) {
+    blockquote {
+        margin: 0.5rem 1rem 66px 1rem;
+        padding: 1.563rem;
+        font-size: 1.45rem;
+    }
+    blockquote::after {
+        bottom: -2.8rem;
+        left: 3.125rem;
+        width: 2.813rem;
+        height: 2.813rem;
+    }
+    blockquote::before {
+        bottom: -4px;
+        left: 3.125rem;
+        width: 5.625rem;
+    }
+    blockquote cite {
+        left: 6.125rem;
+        bottom: -2.125rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+cite, span.cite {
+    position: relative;
+    left: 2px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-style: italic;
+    font-family: var(--fontPrime);
+}
+cite::before, span.cite::before {
+    position: relative;
+    content: "– ";
+}
+q, span.q {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 105%;
+    font-family: var(--fontSerif);
+}
+q::before, q::after, span.q::before, span.q::after {
+    font-size: 1.35rem;
+    font-family: serif;
+}
+q::before, span.q::before {
+    margin-right: 3px;
+}
+q::after, span.q::after {
+    margin-left: 3px;
+}
+span.q::before {
+    content: open-quote;
+}
+span.q::after {
+    content: close-quote;
+}
+
+a, abbr, b, button, cite, code, del, dfn, em, i, ins, kbd, label, mark, map, q, s, select, small, span, strong, sub, sup, time, u, var {
+    display: inline-block;
+}
+strong {
+    font-weight: 600;
+}
+abbr[title] {
+    cursor: help;
+}
+code, mark {
+    position: relative;
+    background-color: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+code {
+    font-family: var(--fontMono);
+    color: var(--code__color);
+    background-color: var(--code__background);
+}
+mark { 
+    color: var(--mark__color);
+    background-color: var(--mark__background);
+    border-radius: 3px;
+}
+time {
+    font-size: 0.95em;
+}
+var {
+    color: var(--White3);
+    font-family: var(--fontMono);
+    font-size: 1.1em;
+}
+kbd {
+    margin: var(--kbd__margin);
+    padding: var(--kbd__padding);
+    font-size: var(--kbd__font-size);
+    letter-spacing: var(--kbd__letter-spacing);
+    color: var(--kbd__color);
+    background-color: var(--kbd__background-color);
+    border: var(--kbd__border);
+    border-radius: var(--kbd__border-radius);
+    box-shadow: var(--kbd__box-shadow);
+    cursor: var(--kbd__cursor);
+    user-select: var(--kbd__user-select);
+}
+kbd::selection {
+    background-color: var(--kbdBackground__selection);
+    color: var(--kbdColor__selection);
+}
+::selection { 
+    text-shadow: none;
+    color: var(--selection__color);
+    background-color: var(--selection__background);
+}

@@ -1,0 +1,27 @@
+.anchor {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.anchor.backtotop {
+    position: fixed;
+    bottom: 16px;
+    right: 15px;
+    width: 66px;
+    height: 55px;
+    font-size: 2.85rem;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    background-color: #B6AE1F;
+    color: rgba(255, 255, 255, 0.90);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.70), -1px 1px rgba(0, 0, 0, 0.70);
+    text-shadow:  0 0 1px 2px rgba(0, 0, 0, 0.70);
+    filter: blur(1px);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.30), -1px -1px rgba(0, 0, 0, 0.30) inset;
+    border-radius: 30px 30px 21px 21px;
+    z-index: 2243;
+}
+.anchor.backtotop:hover {
+    filter: blur(1px) brightness(120%);
+}

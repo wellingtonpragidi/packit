@@ -1,0 +1,158 @@
+/** space 0 */
+.pt0 { padding-top: 0 !important }
+.pr0 { padding-right: 0 !important }
+.pb0 { padding-bottom: 0 !important }
+.pl0 { padding-left: 0 !important }
+.px0 { padding-left: 0 !important; padding-right: 0 !important }
+.py0 { padding-top: 0 !important; padding-bottom: 0 !important }
+.p0, .pxy0 { padding: 0 0 !important }
+/** space top */
+.pt5 { padding-top: 0.313rem !important }
+.pt10 { padding-top: 0.625rem !important }
+.pt15 { padding-top: 0.9375rem !important }
+.pt20 { padding-top: 1.96vw !important }
+.pt25 { padding-top: 2.45vw !important }
+.pt30 { padding-top: 2.9525vw !important }
+.pt35 { padding-top: 3.4225vw !important }
+.pt40 { padding-top: 3.911vw !important }
+.pt50 { padding-top: 4.889vw !important }
+.pt75 { padding-top: 7.3325vw !important }
+.pt100 { padding-top: 9.7752vw !important }
+/** space right */
+.pr5 { padding-right: 0.313rem !important }
+.pr10 { padding-right: 0.625rem !important }
+.pr15 { padding-right: 0.9375rem !important }
+.pr20 { padding-right: 1.96vw !important }
+.pr25 { padding-right: 2.45vw !important }
+.pr30 { padding-right: 2.9525vw !important }
+.pr35 { padding-right: 3.4225vw !important }
+.pr40 { padding-right: 3.911vw !important }
+.pr50 { padding-right: 4.889vw !important }
+.pr75 { padding-right: 7.3325vw !important }
+.pr100 { padding-right: 9.7752vw !important }
+/** space bottom */
+.pb5 { padding-bottom: 0.313rem !important }
+.pb10 { padding-bottom: 0.625rem !important }
+.pb15 { padding-bottom: 0.9375rem !important }
+.pb20 { padding-bottom: 1.96vw !important }
+.pb25 { padding-bottom: 2.45vw !important }
+.pb30 { padding-bottom: 2.9525vw !important }
+.pb35 { padding-bottom: 3.4225vw !important }
+.pb40 { padding-bottom: 3.911vw !important }
+.pb50 { padding-bottom: 4.889vw !important }
+.pb75 { padding-bottom: 7.3325vw !important }
+.pb100 { padding-bottom: 9.7752vw !important }
+/** space left */
+.pl5 { padding-left: 0.313rem !important }
+.pl10 { padding-left: 0.625rem !important }
+.pl15 { padding-left: 0.9375rem !important }
+.pl20 { padding-left: 1.96vw !important }
+.pl25 { padding-left: 2.45vw !important }
+.pl30 { padding-left: 2.9525vw !important }
+.pl35 { padding-left: 3.4225vw !important }
+.pl40 { padding-left: 3.911vw !important }
+.pl50 { padding-left: 4.889vw !important }
+.pl75 { padding-left: 7.3325vw !important }
+.pl100 { padding-left:9.7752vw !important }
+
+/** space x */
+.px5 { padding-right: 0.313rem !important; padding-left: 0.313rem !important }
+.px10 { padding-right: 0.625rem !important; padding-left: 0.625rem !important }
+.px15 { padding-right: 0.9375rem !important; padding-left: 0.9375rem !important }
+.px20 { padding-right: 1.96vw !important; padding-left: 1.96vw !important }
+.px25 { padding-right: 2.45vw !important; padding-left: 2.45vw !important }
+.px30 { padding-right: 2.9525vw !important; padding-left: 2.9525vw !important }
+.px35 { padding-right: 3.4225vw !important; padding-left: 3.4225vw !important }
+.px40 { padding-right: 3.911vw !important; padding-left: 3.911vw !important }
+.px50 { padding-right: 4.889vw !important; padding-left: 4.889vw !important }
+.px75 { padding-right: 7.3325vw !important; padding-left: 7.3325vw !important }
+.px100 { padding-right: 9.7752vw !important; padding-left: 9.7752vw !important }
+/** space y */
+.py5 { padding-top: 0.313rem !important; padding-bottom: 0.313rem !important }
+.py10 { padding-top: 0.625rem !important; padding-bottom: 0.625rem !important }
+.py15 { padding-top: 0.9375rem !important; padding-bottom: 0.9375rem !important }
+.py20 { padding-top: 1.96vw !important; padding-bottom: 1.96vw !important }
+.py25 { padding-top: 2.45vw !important; padding-bottom: 2.45vw !important }
+.py30 { padding-top: 2.9525vw !important; padding-bottom: 2.9525vw !important }
+.py35 { padding-top: 3.4225vw !important; padding-bottom: 3.4225vw !important }
+.py40 { padding-top: 3.911vw !important; padding-bottom: 3.911vw !important }
+.py50 { padding-top: 4.889vw !important; padding-bottom: 4.889vw !important }
+.py75 { padding-top: 7.3325vw !important; padding-bottom: 7.3325vw !important }
+.py100 { padding-top: 9.7752vw !important; padding-bottom: 9.7752vw !important }
+/** space xy */
+.p5, .pxy5 { padding: 0.313rem 0.313rem !important }
+.p10, .pxy10 { padding: 0.625rem 0.625rem !important }
+.p15, .pxy15 { padding: 0.9375rem 0.9375rem !important }
+.p20, .pxy20 { padding: 1.96vw 1.96vw !important }
+.p25, .pxy25 { padding: 2.45vw 2.45vw !important }
+.p30, .pxy30 { padding: 2.9525vw 2.9525vw !important }
+.p35, .pxy35 { padding: 3.4225vw 3.4225vw !important }
+.p40, .pxy40 { padding: 3.911vw 3.911vw !important }
+.p50, .pxy50 { padding: 4.889vw 4.889vw !important }
+.p75, .pxy75 { padding: 7.3325vw 7.3325vw !important }
+.p100, .pxy100 { padding: 9.7752vw 9.7752vw !important }
+@media(min-width: 1024px) {
+    /** space top */
+    .pr20 { padding-top: 1.25rem !important }
+    .pt25 { padding-top: 1.563rem !important }
+    .pt30 { padding-top: 1.875rem !important }
+    .pt35 { padding-top: 2.188rem !important }
+    .pt40 { padding-top: 2.5rem !important }
+    .pt50 { padding-top: 3.125rem !important }
+    .pt75 { padding-top: 4.688rem !important }
+    .pt100 { padding-top: 6.25rem !important }
+    /** space right */
+    .pr20 { padding-right: 1.25rem !important }
+    .pr25 { padding-right: 1.563rem !important }
+    .pr30 { padding-right: 1.875rem !important }
+    .pr35 { padding-right: 2.188rem !important }
+    .pr40 { padding-right: 2.5rem !important }
+    .pr50 { padding-right: 3.125rem !important }
+    .pr75 { padding-right: 4.688rem !important }
+    .pr100 { padding-right: 6.25rem !important }
+    /** space bottom */
+    .pb20 { padding-bottom: 1.25rem !important }
+    .pb25 { padding-bottom: 1.563rem !important }
+    .pb30 { padding-bottom: 1.875rem !important }
+    .pb35 { padding-bottom: 2.188rem !important }
+    .pb40 { padding-bottom: 2.5rem !important }
+    .pb50 { padding-bottom: 3.125rem !important }
+    .pb75 { padding-bottom: 4.688rem !important }
+    .pb100 { padding-bottom: 6.25rem !important }
+    /** space left */
+    .pl20 { padding-left: 1.25rem !important }
+    .pl25 { padding-left: 1.563rem !important }
+    .pl30 { padding-left: 1.875rem !important }
+    .pl35 { padding-left: 2.188rem !important }
+    .pl40 { padding-left: 2.5rem !important }
+    .pl50 { padding-left: 3.125rem !important }
+    .pl75 { padding-left: 4.688rem !important }
+    .pl100 { padding-left:6.25rem !important }
+    /** space x */
+    .px20 { padding-right: 1.25rem !important; padding-left: 1.25rem !important }
+    .px25 { padding-right: 1.563rem !important; padding-left: 1.563rem !important }
+    .px30 { padding-right: 1.875rem !important; padding-left: 1.875rem !important }
+    .px35 { padding-right: 2.188rem !important; padding-left: 2.188rem !important }
+    .px40 { padding-right: 2.5rem !important; padding-left: 2.5rem !important }
+    .px50 { padding-right: 3.125rem !important; padding-left: 3.125rem !important }
+    .px75 { padding-right: 4.688rem !important; padding-left: 4.688rem !important }
+    .px100 { padding-right: 6.25rem !important; padding-left: 6.25rem !important }
+    /** space y */
+    .py20 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important }
+    .py25 { padding-top: 1.563rem !important; padding-bottom: 1.563rem !important }
+    .py30 { padding-top: 1.875rem !important; padding-bottom: 1.875rem !important }
+    .py35 { padding-top: 2.188rem !important; padding-bottom: 2.188rem !important }
+    .py40 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important }
+    .py50 { padding-top: 3.125rem !important; padding-bottom: 3.125rem !important }
+    .py75 { padding-top: 4.688rem !important; padding-bottom: 4.688rem !important }
+    .py100 { padding-top: 6.25rem !important; padding-bottom: 6.25rem !important }
+    /** space xy */
+    .p20, .pxy20 { padding: 1.25rem 1.25rem !important }
+    .p25, .pxy25 { padding: 1.563rem 1.563rem !important }
+    .p30, .pxy30 { padding: 1.875rem 1.875rem !important }
+    .p35, .pxy35 { padding: 2.188rem 2.188rem !important }
+    .p40, .pxy40 { padding: 2.5rem 2.5rem !important }
+    .p50, .pxy50 { padding: 3.125rem 3.125rem !important }
+    .p75, .pxy75 { padding: 4.688rem 4.688rem !important }
+    .p100, .pxy100 { padding: 6.25rem 6.25rem !important }
+}

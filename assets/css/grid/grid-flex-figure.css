@@ -1,0 +1,37 @@
+.flexbox_figure {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.313rem;
+    margin-right: -0.313rem;
+}
+/* 1 coluna */
+figure[class^="cn_"], figure[class*=" cn_"] {
+    margin: 0.313rem;
+    padding: 0.45rem 0.45rem;
+    flex: 0 0 calc(100% - 0.626rem);
+}
+@media(min-width: 480px) {
+    figure[class^="cn_"], figure[class*=" cn_"] {
+        flex: 0 0 calc(50% - 0.626rem);
+    }
+    figure.cn_0 { 
+        flex: 1 0 0% 
+    }
+    figure.cn_100 {
+        flex: 0 0 100%;
+    }
+}
+@media(min-width: 640px) {
+    /* 12 tamanhos de colunas */
+    figure.cn_20 { flex: 0 0 calc(20% - 0.626rem) }
+    figure.cn_25 { flex: 0 0 calc(25% - 0.626rem) }
+    figure.cn_30 { flex: 0 0 calc(30% - 0.626rem) }
+    figure.cn_33 { flex: 0 0 calc(33.333333% - 0.626rem) }
+    figure.cn_40 { flex: 0 0 calc(40% - 0.626rem) }
+    figure.cn_50 { flex: 0 0 calc(50% - 0.626rem) }
+    figure.cn_60 { flex: 0 0 calc(60% - 0.626rem) }
+    figure.cn_67 { flex: 0 0 calc(66.666667% - 0.626rem) }
+    figure.cn_70 { flex: 0 0 calc(70% - 0.626rem) }
+    figure.cn_75 { flex: 0 0 calc(75% - 0.626rem) }
+    figure.cn_80 { flex: 0 0 calc(80% - 0.626rem) }
+}

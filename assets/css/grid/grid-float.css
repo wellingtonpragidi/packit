@@ -1,0 +1,34 @@
+.floatbox {
+    position: relative;
+    display: block;
+}
+.floatbox::before, .floatbox::after {
+    display: table !important;
+    content: '' !important;
+    clear: both !important;
+}
+[class^="col_"], [class*=" col_"] {
+    width: 100%;
+    float: left;
+}
+@media(min-width: 480px) {
+    [class^="col_"], [class*=" col_"] { 
+        width: 50% 
+    }
+    .col_100 {
+        width: 100%
+    }
+}
+@media(min-width: 640px) {
+    .col_20 { width: 20% }
+    .col_25 { width: 25% }
+    .col_30 { width: 30% }
+    .col_33 { width: 33.333333% }
+    .col_40 { width: 40% }
+    .col_50 { width: 50% }
+    .col_60 { width: 60% }
+    .col_67 { width: 66.666667% }
+    .col_70 { width: 70% }
+    .col_75 { width: 75% }
+    .col_80 { width: 80% }
+}
